@@ -208,4 +208,19 @@ document.getElementById('downloadBtn').addEventListener('click', () => {
     link.download = 'sheet-music.png';
     link.href = canvas.toDataURL('image/png');
     link.click();
+});
+
+// Help section toggle
+document.querySelector('.help-toggle').addEventListener('click', function() {
+    const helpContent = document.getElementById('helpContent');
+    const isExpanded = helpContent.classList.contains('show');
+    
+    // Toggle the content
+    helpContent.classList.toggle('show');
+    
+    // Update the button text
+    this.textContent = isExpanded ? 'Help ▼' : 'Help ▲';
+    
+    // Toggle the active class for styling
+    this.classList.toggle('active');
 }); 

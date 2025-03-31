@@ -266,4 +266,42 @@ button:hover {
 
 .footer a:hover {
     color: #2980b9;
+}
+
+.help-section {
+    margin-bottom: 2rem;
+}
+
+.help-toggle {
+    width: 100%;
+    text-align: left;
+    padding: 1rem;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    transition: background-color 0.3s;
+}
+
+.help-toggle:hover {
+    background-color: #2980b9;
+}
+
+.help-toggle.active {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    margin-bottom: 0;
+}
+
+#helpContent {
+    display: none;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+#helpContent.show {
+    display: block;
 } 

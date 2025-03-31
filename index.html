@@ -25,75 +25,78 @@
             </div>
             <button id="convertBtn">Convert to Visual Music</button>
         </div>
-        <div class="legend">
-            <h3>Note Colors:</h3>
-            <div class="color-legend">
-                <div class="legend-item"><span class="color-dot c"></span>C</div>
-                <div class="legend-item"><span class="color-dot d"></span>D</div>
-                <div class="legend-item"><span class="color-dot e"></span>E</div>
-                <div class="legend-item"><span class="color-dot f"></span>F</div>
-                <div class="legend-item"><span class="color-dot g"></span>G</div>
-                <div class="legend-item"><span class="color-dot a"></span>A</div>
-                <div class="legend-item"><span class="color-dot h"></span>H</div>
-            </div>
-            <h3>Note Durations:</h3>
-            <div class="duration-legend">
-                <div class="legend-item">
-                    <div class="duration-dot-container whole-container">
-                        <span class="duration-dot whole-dot"></span>
-                        <span class="duration-dot whole-dot"></span>
-                        <span class="duration-dot whole-dot"></span>
-                        <span class="duration-dot whole-dot"></span>
-                    </div>
-                    <div class="legend-text">Whole Note (w)</div>
+        <div class="help-section">
+            <button class="help-toggle">Help ▼</button>
+            <div class="legend" id="helpContent">
+                <h3>Note Colors:</h3>
+                <div class="color-legend">
+                    <div class="legend-item"><span class="color-dot c"></span>C</div>
+                    <div class="legend-item"><span class="color-dot d"></span>D</div>
+                    <div class="legend-item"><span class="color-dot e"></span>E</div>
+                    <div class="legend-item"><span class="color-dot f"></span>F</div>
+                    <div class="legend-item"><span class="color-dot g"></span>G</div>
+                    <div class="legend-item"><span class="color-dot a"></span>A</div>
+                    <div class="legend-item"><span class="color-dot h"></span>H</div>
                 </div>
-                <div class="legend-item">
-                    <div class="duration-dot-container half-container">
-                        <span class="duration-dot half-dot"></span>
-                        <span class="duration-dot half-dot"></span>
+                <h3>Note Durations:</h3>
+                <div class="duration-legend">
+                    <div class="legend-item">
+                        <div class="duration-dot-container whole-container">
+                            <span class="duration-dot whole-dot"></span>
+                            <span class="duration-dot whole-dot"></span>
+                            <span class="duration-dot whole-dot"></span>
+                            <span class="duration-dot whole-dot"></span>
+                        </div>
+                        <div class="legend-text">Whole Note (w)</div>
                     </div>
-                    <div class="legend-text">Half Note (h)</div>
-                </div>
-                <div class="legend-item">
-                    <div class="duration-dot-container">
-                        <span class="duration-dot quarter"></span>
+                    <div class="legend-item">
+                        <div class="duration-dot-container half-container">
+                            <span class="duration-dot half-dot"></span>
+                            <span class="duration-dot half-dot"></span>
+                        </div>
+                        <div class="legend-text">Half Note (h)</div>
                     </div>
-                    <div class="legend-text">Quarter Note (q)</div>
-                </div>
-                <div class="legend-item">
-                    <div class="duration-dot-container">
-                        <span class="duration-dot eighth"></span>
+                    <div class="legend-item">
+                        <div class="duration-dot-container">
+                            <span class="duration-dot quarter"></span>
+                        </div>
+                        <div class="legend-text">Quarter Note (q)</div>
                     </div>
-                    <div class="legend-text">Eighth Note (e)</div>
-                </div>
-            </div>
-            <h3>Prime Notation:</h3>
-            <div class="prime-legend">
-                <div class="legend-item">
-                    <div class="duration-dot-container">
-                        <span class="duration-dot base-note"></span>
+                    <div class="legend-item">
+                        <div class="duration-dot-container">
+                            <span class="duration-dot eighth"></span>
+                        </div>
+                        <div class="legend-text">Eighth Note (e)</div>
                     </div>
-                    <div class="legend-text">Base Note (C) - Black Dot</div>
                 </div>
-                <div class="legend-item">
-                    <div class="duration-dot-container">
-                        <span class="duration-dot prime-note"></span>
+                <h3>Prime Notation:</h3>
+                <div class="prime-legend">
+                    <div class="legend-item">
+                        <div class="duration-dot-container">
+                            <span class="duration-dot base-note"></span>
+                        </div>
+                        <div class="legend-text">Base Note (C) - Black Dot</div>
                     </div>
-                    <div class="legend-text">Prime Note (C') - No Dot</div>
-                </div>
-                <div class="legend-item">
-                    <div class="duration-dot-container">
-                        <span class="duration-dot double-prime-note"></span>
+                    <div class="legend-item">
+                        <div class="duration-dot-container">
+                            <span class="duration-dot prime-note"></span>
+                        </div>
+                        <div class="legend-text">Prime Note (C') - No Dot</div>
                     </div>
-                    <div class="legend-text">Double Prime Note (C'') - White Dot</div>
+                    <div class="legend-item">
+                        <div class="duration-dot-container">
+                            <span class="duration-dot double-prime-note"></span>
+                        </div>
+                        <div class="legend-text">Double Prime Note (C'') - White Dot</div>
+                    </div>
                 </div>
-            </div>
-            <h3>Examples:</h3>
-            <div class="examples">
-                <code>C#w</code> - C-sharp with black dot (whole note)<br>
-                <code>D'h</code> - D with no dot (half note)<br>
-                <code>E''q</code> - E with white dot (quarter note)<br>
-                <code>F#'e</code> - F-sharp with no dot (eighth note)
+                <h3>Examples:</h3>
+                <div class="examples">
+                    <code>C#w</code> - C-sharp with black dot (whole note)<br>
+                    <code>D'h</code> - D with no dot (half note)<br>
+                    <code>E''q</code> - E with white dot (quarter note)<br>
+                    <code>F#'e</code> - F-sharp with no dot (eighth note)
+                </div>
             </div>
         </div>
         <div class="sheet-music-container">
