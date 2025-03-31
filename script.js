@@ -216,16 +216,16 @@ document.addEventListener('DOMContentLoaded', function() {
     const helpContent = document.getElementById('helpContent');
 
     if (helpToggle && helpContent) {
-        // Ensure content is hidden by default
-        helpContent.classList.remove('show');
+        // Force content to be hidden initially
+        helpContent.style.display = 'none';
         helpToggle.setAttribute('aria-expanded', 'false');
         helpToggle.textContent = 'Help ▼';
 
         helpToggle.addEventListener('click', function() {
-            const isExpanded = helpContent.classList.contains('show');
+            const isExpanded = helpContent.style.display === 'block';
             
             // Toggle the content
-            helpContent.classList.toggle('show');
+            helpContent.style.display = isExpanded ? 'none' : 'block';
             
             // Update the button text and aria-expanded
             this.textContent = isExpanded ? 'Help ▼' : 'Help ▲';
