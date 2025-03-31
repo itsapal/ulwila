@@ -210,17 +210,24 @@ document.getElementById('downloadBtn').addEventListener('click', () => {
     link.click();
 });
 
-// Help section toggle
-document.querySelector('.help-toggle').addEventListener('click', function() {
+// Wait for DOM to be fully loaded before setting up event listeners
+document.addEventListener('DOMContentLoaded', () => {
+    // Help section toggle
+    const helpToggle = document.querySelector('.help-toggle');
     const helpContent = document.getElementById('helpContent');
-    const isExpanded = helpContent.classList.contains('show');
     
-    // Toggle the content
-    helpContent.classList.toggle('show');
-    
-    // Update the button text
-    this.textContent = isExpanded ? 'Help ▼' : 'Help ▲';
-    
-    // Toggle the active class for styling
-    this.classList.toggle('active');
+    if (helpToggle && helpContent) {
+        helpToggle.addEventListener('click', function() {
+            const isExpanded = helpContent.classList.contains('show');
+            
+            // Toggle the content
+            helpContent.classList.toggle('show');
+            
+            // Update the button text
+            this.textContent = isExpanded ? 'Help ▼' : 'Help ▲';
+            
+            // Toggle the active class for styling
+            this.classList.toggle('active');
+        });
+    }
 }); 
