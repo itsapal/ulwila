@@ -296,6 +296,14 @@ button:hover {
     margin-bottom: 0;
 }
 
+.collapse {
+    display: none;
+}
+
+.collapse.show {
+    display: block;
+}
+
 #helpContent {
     display: none;
     border-top-left-radius: 0;

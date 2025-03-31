@@ -211,20 +211,25 @@ document.getElementById('downloadBtn').addEventListener('click', () => {
 });
 
 // Wait for DOM to be fully loaded before setting up event listeners
-document.addEventListener('DOMContentLoaded', () => {
-    // Help section toggle
+document.addEventListener('DOMContentLoaded', function() {
     const helpToggle = document.querySelector('.help-toggle');
     const helpContent = document.getElementById('helpContent');
-    
+
     if (helpToggle && helpContent) {
+        // Ensure content is hidden by default
+        helpContent.classList.remove('show');
+        helpToggle.setAttribute('aria-expanded', 'false');
+        helpToggle.textContent = 'Help ▼';
+
         helpToggle.addEventListener('click', function() {
             const isExpanded = helpContent.classList.contains('show');
             
             // Toggle the content
             helpContent.classList.toggle('show');
             
-            // Update the button text
+            // Update the button text and aria-expanded
             this.textContent = isExpanded ? 'Help ▼' : 'Help ▲';
+            this.setAttribute('aria-expanded', !isExpanded);
             
             // Toggle the active class for styling
             this.classList.toggle('active');
