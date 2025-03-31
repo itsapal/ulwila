@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ULWILA Converter</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>ULWILA Converter</h1>
+        <div class="input-section">
+            <textarea id="musicInput" placeholder="Enter notes with optional prime notation and duration (e.g., C for black dot, C' for no dot, C'' for white dot). Add accidentals and duration (e.g., C''#w). Press Enter for new row."></textarea>
+            <textarea id="textInput" placeholder="Enter text to display under the notes. Press Enter for new row, Space for spacing."></textarea>
+            <div class="controls">
+                <label for="sizeSlider">Note Size:</label>
+                <input type="range" id="sizeSlider" min="10" max="30" value="15" class="slider">
+                <span id="sizeValue">15px</span>
+                <label for="fontSizeSlider">Text Size:</label>
+                <input type="range" id="fontSizeSlider" min="10" max="24" value="16" class="slider">
+                <span id="fontSizeValue">16px</span>
+                <label for="textOffsetSlider">Text Position:</label>
+                <input type="range" id="textOffsetSlider" min="-20" max="20" value="-5" class="slider">
+                <span id="textOffsetValue">-5px</span>
+            </div>
+            <button id="convertBtn">Convert to Visual Music</button>
+        </div>
+        <div class="legend">
+            <h3>Note Colors:</h3>
+            <div class="color-legend">
+                <div class="legend-item"><span class="color-dot c"></span>C</div>
+                <div class="legend-item"><span class="color-dot d"></span>D</div>
+                <div class="legend-item"><span class="color-dot e"></span>E</div>
+                <div class="legend-item"><span class="color-dot f"></span>F</div>
+                <div class="legend-item"><span class="color-dot g"></span>G</div>
+                <div class="legend-item"><span class="color-dot a"></span>A</div>
+                <div class="legend-item"><span class="color-dot h"></span>H</div>
+            </div>
+            <h3>Note Durations:</h3>
+            <div class="duration-legend">
+                <div class="legend-item">
+                    <div class="duration-dot-container whole-container">
+                        <span class="duration-dot whole-dot"></span>
+                        <span class="duration-dot whole-dot"></span>
+                        <span class="duration-dot whole-dot"></span>
+                        <span class="duration-dot whole-dot"></span>
+                    </div>
+                    <div class="legend-text">Whole Note (w)</div>
+                </div>
+                <div class="legend-item">
+                    <div class="duration-dot-container half-container">
+                        <span class="duration-dot half-dot"></span>
+                        <span class="duration-dot half-dot"></span>
+                    </div>
+                    <div class="legend-text">Half Note (h)</div>
+                </div>
+                <div class="legend-item">
+                    <div class="duration-dot-container">
+                        <span class="duration-dot quarter"></span>
+                    </div>
+                    <div class="legend-text">Quarter Note (q)</div>
+                </div>
+                <div class="legend-item">
+                    <div class="duration-dot-container">
+                        <span class="duration-dot eighth"></span>
+                    </div>
+                    <div class="legend-text">Eighth Note (e)</div>
+                </div>
+            </div>
+            <h3>Prime Notation:</h3>
+            <div class="prime-legend">
+                <div class="legend-item">
+                    <div class="duration-dot-container">
+                        <span class="duration-dot base-note"></span>
+                    </div>
+                    <div class="legend-text">Base Note (C) - Black Dot</div>
+                </div>
+                <div class="legend-item">
+                    <div class="duration-dot-container">
+                        <span class="duration-dot prime-note"></span>
+                    </div>
+                    <div class="legend-text">Prime Note (C') - No Dot</div>
+                </div>
+                <div class="legend-item">
+                    <div class="duration-dot-container">
+                        <span class="duration-dot double-prime-note"></span>
+                    </div>
+                    <div class="legend-text">Double Prime Note (C'') - White Dot</div>
+                </div>
+            </div>
+            <h3>Examples:</h3>
+            <div class="examples">
+                <code>C#w</code> - C-sharp with black dot (whole note)<br>
+                <code>D'h</code> - D with no dot (half note)<br>
+                <code>E''q</code> - E with white dot (quarter note)<br>
+                <code>F#'e</code> - F-sharp with no dot (eighth note)
+            </div>
+        </div>
+        <div class="sheet-music-container">
+            <canvas id="sheetMusic"></canvas>
+            <div class="button-container">
+                <button id="downloadBtn">Download Sheet Music</button>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <p>Contact: <a href="mailto:zalanikisspal@gmail.com">zalanikisspal@gmail.com</a></p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html> 
